@@ -1,0 +1,64 @@
+.archive{
+    padding: 0 60px;
+    color: var(--text-color-1);
+    &-title{
+        position: relative;
+        font-size: 1.4rem;
+        padding-left: 24px;
+        &::before{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            opacity: .5;
+            background-color: var(--text-color-1);
+        }
+    }
+    &-section{
+        padding: 10px 0;
+    }
+    &-year{
+        position: relative;
+        font-size: 2rem;
+        margin: 40px 0;
+        padding-left: 24px;
+        &::before{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            opacity: .5;
+            background-color: var(--text-color-1);
+        }
+    }
+    &-article{
+        position: relative;
+        margin: 20px 0;
+        padding-left: 24px;
+        line-height: 2;
+        border-bottom: 1px dotted #dbdde0;
+        &::before{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            opacity: .5;
+            background-color: var(--text-color-1);
+        }
+    }
+}

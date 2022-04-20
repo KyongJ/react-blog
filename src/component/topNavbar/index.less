@@ -1,0 +1,66 @@
+.top-nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    transition: all 0.5s;
+    margin-bottom: 15px;
+    .blog-title {
+        font-size: 2rem;
+        margin-left: 50px;
+        font-weight: 600;
+        color: var(--text-color);
+        position: relative;
+    }
+    .blog-link {
+        display: flex;
+        margin-right: 20px;
+        font-size: 1.5rem;
+        .skin {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .nav-link {
+            display: flex;
+            li {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                a:hover span {
+                    color: #1d54db;
+                }
+            }
+            .top-nav-active span {
+                color: #1d54db;
+            }
+        }
+        .search {
+            margin-right: 20px;
+        }
+
+        .github-link  {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            &:hover span{
+                color: #1d54db;
+            }
+        }
+    }
+}
+.top-nav-hide{
+    transform: translateY(-100%);
+}
+
+@media screen and (max-width: 950px) {
+    .top-nav {
+        display: none;
+    }
+}

@@ -1,0 +1,65 @@
+.module-article {
+    a{
+        display: block;
+    }
+    .ant-list-item {
+        box-shadow: var(--box-shadow);
+        margin-top: 20px;
+        padding: 15px;
+        cursor: pointer;
+        transition: all 0.4s;
+        &:hover {
+            box-shadow: var(--box-shadow-hover);
+        }
+    }
+    &-title {
+        display: inline-block;
+        position: relative;
+        color: var(--text-color-1);
+        font-size: 2rem;
+        font-weight: 700;
+        border-bottom: none;
+        line-height: 1.5;
+        vertical-align: middle;
+        &::before {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            visibility: hidden;
+            content: '';
+            height: 3px;
+            width: 100%;
+            transition: all 0.2s ease-in-out;
+            transform: scaleX(0);
+            background-color: var(--default-color-8);
+        }
+        &:hover::before {
+            transform: scaleX(1);
+            visibility: visible;
+        }
+    }
+
+    &-content {
+        p {
+            word-break: break-all;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* 这里是超出几行省略 */
+            overflow: hidden;
+        }
+    }
+
+    &-meta {
+        display: flex;
+        flex-wrap: wrap;
+        color: var(--text-color-1);
+        .meta-item {
+            display: flex;
+            margin-right: 2.5rem;
+            svg {
+                margin-right: 0.8rem;
+            }
+        }
+    }
+}

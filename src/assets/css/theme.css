@@ -1,0 +1,56 @@
+:root {
+    --default-color-10: rgba(0, 0, 0, 1);
+    --default-color-9: rgba(0, 0, 0, 0.9);
+    --default-color-8: rgba(0, 0, 0, 0.8);
+    --default-color-7: rgba(0, 0, 0, 0.7);
+    --default-color-6: rgba(0, 0, 0, 0.6);
+    --default-color-5: rgba(0, 0, 0, 0.5);
+    --default-color-4: rgba(0, 0, 0, 0.4);
+    --default-color-3: rgba(0, 0, 0, 0.3);
+    --default-color-2: rgba(0, 0, 0, 0.2);
+    --default-color-1: rgba(0, 0, 0, 0.1);
+    --background-color:#fff;
+    --background-hover:#f9f9f9;
+    --box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
+    --text-color: #242424;
+    --text-color-hover:rgba(255,255,255,.8);
+    --text-color-1:#555;
+    --text-color-sub: #7F7F7F;
+    --code-color: rgba(27, 31, 35, 0.05);
+    --home-bgc:linear-gradient(
+        90deg,
+        rgba(247, 149, 51, 0.1),
+        rgba(243, 112, 85, 0.1) 15%,
+        rgba(239, 78, 123, 0.1) 30%,
+        rgba(161, 102, 171, 0.1) 44%,
+        rgba(80, 115, 184, 0.1) 58%,
+        rgba(16, 152, 173, 0.1) 72%,
+        rgba(7, 179, 155, 0.1) 86%,
+        rgba(109, 186, 130, 0.1)
+    );
+    /* --home-bgc:#f9f9f9; */
+}
+
+:root .dark{
+    --default-color-10: rgba(255, 255, 255, 1);
+    --default-color-9: rgba(255, 255, 255, 0.9);
+    --default-color-8: rgba(255, 255, 255, 0.8);
+    --default-color-7: rgba(255, 255, 255, 0.7);
+    --default-color-6: rgba(255, 255, 255, 0.6);
+    --default-color-5: rgba(255, 255, 255, 0.5);
+    --default-color-4: rgba(255, 255, 255, 0.4);
+    --default-color-3: rgba(255, 255, 255, 0.3);
+    --default-color-2: rgba(255, 255, 255, 0.2);
+    --default-color-1: rgba(0255, 255, 255, 0.1);
+    --background-color: #333;
+    --background-hover:#555;
+    --box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.6);
+    --box-shadow-hover: 0 2px 16px 0 rgba(0, 0, 0, 0.7);
+    --text-color: rgba(255, 255, 255, 0.8);
+    --text-color-hover:rgba(0,0,0,.8);
+    --text-color-1:rgba(255, 255, 255, 0.8);
+    --text-color-sub: #8B8B8B;
+    --code-color: rgba(0, 0, 0, 0.3);
+    --home-bgc:#282828;
+}

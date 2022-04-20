@@ -1,0 +1,359 @@
+@import './theme.css';
+
+html,
+body,
+body div,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+abbr,
+address,
+cite,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--text-color-1);
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, Lato, '微软雅黑', 'Segoe UI', 'Consolas',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+main,
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+    display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+    box-sizing: border-box;
+    /* background: url(https://kyong-blog.oss-cn-shenzhen.aliyuncs.com/articleContent/夜空.jpeg) no-repeat fixed; */
+    background-position: center;
+    background-size: cover;
+    /* background: var(--home-bgc); */
+    /* background: #000; */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img,
+object,
+embed {
+    max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+#map img {
+		max-width: none;
+}
+*/
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    color: var(--text-color-1);
+    /* vertical-align: baseline; */
+    text-decoration: none;
+    background: transparent;
+}
+a:hover {
+    color: var(--text-color-1);
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+th {
+    font-weight: bold;
+    vertical-align: bottom;
+}
+td {
+    font-weight: normal;
+    vertical-align: top;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+pre {
+    white-space: pre-wrap; /* CSS 2.1 */
+    word-wrap: break-word; /* IE */
+}
+
+input[type='radio'] {
+    vertical-align: text-bottom;
+}
+input[type='checkbox'] {
+    vertical-align: bottom;
+}
+.ie7 input[type='checkbox'] {
+    vertical-align: baseline;
+}
+.ie6 input {
+    vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+    font: 99% sans-serif;
+}
+
+table {
+    font-size: inherit;
+    font: 100%;
+}
+
+small {
+    font-size: 85%;
+}
+
+strong {
+    font-weight: bold;
+}
+
+td,
+td img {
+    vertical-align: top;
+}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type='button'],
+input[type='submit'],
+input[type='file'],
+button {
+    cursor: pointer;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+    -ms-interpolation-mode: bicubic;
+}
+
+/* let's clear some floats */
+.clearfix:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--default-color-10);
+}
+h5 {
+    color: var(--default-color-8);
+}
+h6 {
+    color: var(--default-color-7);
+}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+    /* height: 100%; */
+    font-size: 62.5%;
+    overflow-y: scroll;
+}
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/* pc width > 1100px */
+body {
+    width: 100%;
+    /* overflow: hidden; */
+    /* min-height: 100%; */
+    font-size: 1.6rem;
+}
+
+/** 伪类*/
+::selection {
+    color: var(--background-color);
+    background: var(--text-color-1);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: orange;
+    background-image: -webkit-linear-gradient(
+        45deg,
+        hsla(0, 0%, 100%, 0.4) 25%,
+        transparent 0,
+        transparent 50%,
+        hsla(0, 0%, 100%, 0.4) 0,
+        hsla(0, 0%, 100%, 0.4) 75%,
+        transparent 0,
+        transparent
+    );
+    border-radius: 2rem;
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(245, 199, 73, 0.2);
+    border-radius: 2rem;
+}
+.none {
+    display: none !important;
+}
+/* ipad pro */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 1.6rem;
+    }
+}
+/* ipad */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1.5rem;
+    }
+}
+/* iphone6 7 8 plus */
+@media screen and (max-width: 414px) {
+    body {
+        font-size: 1.4rem;
+    }
+}
+/* iphoneX */
+@media screen and (max-width: 375px) and (-webkit-device-pixel-ratio: 3) {
+    body {
+        font-size: 1.3rem;
+    }
+}
+/* iphone6 7 8 */
+@media screen and (max-width: 375px) and (-webkit-device-pixel-ratio: 2) {
+    body {
+        font-size: 1.3rem;
+    }
+}
+/* iphone5 */
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 1.3rem;
+    }
+}

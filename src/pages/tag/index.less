@@ -1,0 +1,27 @@
+.tag{
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            // display: flex;
+            // align-items: center;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            transition: all 0.5s;
+            border-radius: 3px;
+            font-size: 1.3rem;
+            padding: 3px 15px;
+            color: #fff;
+            box-shadow: var(--box-shadow);
+            // color: var(--text-color-1);
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+        .tag-active{
+            transform: scale(1.2);
+
+        }
+    }
+}
