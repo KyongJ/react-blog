@@ -60,36 +60,42 @@ const ArticleCard: React.FC<Props> = props => {
     }, [changeArticle]);
     return (
         <div className="article-card">
-            <div className="card-title">{isArticlePage ? '🍉 相关文章' : '🎖️ 文章排行'}</div>
-            <div className="article-list">
-                {!loading ? (
-                    articleList.map(item => (
-                        <div className="item" key={item.id}>
-                            <Link to={`/article/${item.id}`}>
-                                <img
-                                    src={
-                                        item.articleCover
-                                            ? item.articleCover
-                                            : 'https://blog.52itstyle.vip/usr/uploads/2021/04/429968771.png'
-                                    }
-                                    alt="error"
-                                    className="thumb"
-                                />
-                                <div className="item-info ">
-                                    <div className="item-title animate__animated animate__fadeInDown">
-                                        {item.articleTitle}
-                                    </div>
-                                    <div className="item-date animate__animated animate__fadeInDown">
-                                        {dayjs(item.createTime).format('YYYY-MM-DD')}
-                                    </div>
+            {articleList.length > 0 && (
+                <>
+                    <div className="card-title">
+                        {isArticlePage ? '🍉 相关文章' : '🎖️ 文章排行'}
+                    </div>
+                    <div className="article-list">
+                        {!loading ? (
+                            articleList.map(item => (
+                                <div className="item" key={item.id}>
+                                    <Link to={`/article/${item.id}`}>
+                                        <img
+                                            src={
+                                                item.articleCover
+                                                    ? item.articleCover
+                                                    : 'https://blog.52itstyle.vip/usr/uploads/2021/04/429968771.png'
+                                            }
+                                            alt="error"
+                                            className="thumb"
+                                        />
+                                        <div className="item-info ">
+                                            <div className="item-title animate__animated animate__fadeInDown">
+                                                {item.articleTitle}
+                                            </div>
+                                            <div className="item-date animate__animated animate__fadeInDown">
+                                                {dayjs(item.createTime).format('YYYY-MM-DD')}
+                                            </div>
+                                        </div>
+                                    </Link>
                                 </div>
-                            </Link>
-                        </div>
-                    ))
-                ) : (
-                    <Loading top={0} />
-                )}
-            </div>
+                            ))
+                        ) : (
+                            <Loading top={0} />
+                        )}
+                    </div>
+                </>
+            )}
         </div>
     );
 };

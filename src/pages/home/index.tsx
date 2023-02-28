@@ -53,7 +53,7 @@ const Home: FC<Props> = (props: Props) => {
                         <AuthRouter routes={routeConfig}></AuthRouter>
                     </section>
                 </main>
-                        <Footer />
+                <Footer />
             </div>
             <div style={{ position: 'absolute', right: 0, bottom: 20 }}>
                 <BackTop />
