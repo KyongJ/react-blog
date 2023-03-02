@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, Suspense, useState } from 'react';
 import MyNav from '@/component/nav';
 import AuthRouter from '@/route/authRouter';
 import routeConfig from '@/route';
@@ -50,7 +50,9 @@ const Home: FC<Props> = (props: Props) => {
                         <SideBar />
                     </header>
                     <section className="content">
-                        <AuthRouter routes={routeConfig}></AuthRouter>
+                        <Suspense fallback={<></>}>
+                            <AuthRouter routes={routeConfig}></AuthRouter>
+                        </Suspense>
                     </section>
                 </main>
                 <Footer />

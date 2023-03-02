@@ -44,7 +44,7 @@ const MessageCard: FC<Props> = (props: Props) => {
                                 </Link>
                             </div>
                             <div className="site-state-item">
-                                <Link to="/article">
+                                <Link to="/category">
                                     <div className="site-state-item-count">
                                         {blogInfo.categoryCount}
                                     </div>
@@ -52,7 +52,7 @@ const MessageCard: FC<Props> = (props: Props) => {
                                 </Link>
                             </div>
                             <div className="site-state-item">
-                                <Link to="/archive">
+                                <Link to="/tag">
                                     <div className="site-state-item-count">{blogInfo.tagCount}</div>
                                     <div className="site-state-item-name">标签</div>
                                 </Link>
@@ -62,13 +62,12 @@ const MessageCard: FC<Props> = (props: Props) => {
                 ),
             },
         ],
-        [cataLog,blogInfo]
+        [cataLog, blogInfo]
     );
 
     useEffect(() => {
         setField(sideBarConfig);
     }, [sideBarConfig]);
-
 
     const getApiBlogInfo = async () => {
         try {

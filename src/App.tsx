@@ -1,8 +1,8 @@
-import React from 'react';
-import Home from '@/pages/home';
+import React, { lazy, Suspense } from 'react';
 
 import { RecoilRoot } from 'recoil';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Home from './pages/home';
 
 function App() {
     return (

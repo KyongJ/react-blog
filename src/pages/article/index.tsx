@@ -87,20 +87,21 @@ const Article: FC<Props> = (props: Props) => {
                         </div>
                         <div className="article-meta-item">
                             <Link to={`/category?id=${article.categoryId}`}>
-                            <div className="icon">
-                                <MyIconFont type="icon-wenzhangfenlei" />
-                            </div>
-                            {article.categoryName}</Link>
+                                <div className="icon">
+                                    <MyIconFont type="icon-wenzhangfenlei" />
+                                </div>
+                                {article.categoryName}
+                            </Link>
                         </div>
                         <div className="article-meta-item">
                             {article.tagDTOList.map((item: any) => (
                                 <div key={item.id} style={{ display: 'flex', marginRight: 5 }}>
-                                   <Link to={`/tag?id=${item.id}`}>
-                                   <div className="icon">
-                                        <MyIconFont type="icon-biaoqian" />
-                                    </div>
-                                    {item.tagName}
-                                   </Link>
+                                    <Link to={`/tag?id=${item.id}`}>
+                                        <div className="icon">
+                                            <MyIconFont type="icon-biaoqian" />
+                                        </div>
+                                        {item.tagName}
+                                    </Link>
                                 </div>
                             ))}
                         </div>
@@ -112,10 +113,7 @@ const Article: FC<Props> = (props: Props) => {
                         </div>
                     </div>
                     <div className="article-cover">
-                        <Image
-                            width="100%"
-                            src={article.articleCover}
-                        />
+                        <Image width="100%" src={article.articleCover} />
                     </div>
                     <div className="article-content">
                         <Editor
@@ -151,10 +149,7 @@ const Article: FC<Props> = (props: Props) => {
                         <div className="article-near-item">
                             {article.lastArticle.id && (
                                 <Link to={`/article/${article.lastArticle.id}`}>
-                                    <img
-                                        src={article.lastArticle.articleCover}
-                                        alt="error"
-                                    />
+                                    <img src={article.lastArticle.articleCover} alt="error" />
                                     <div className="article-near-item-info">
                                         <div className="info-label">上一篇</div>
                                         <div className="info-title">
@@ -167,10 +162,7 @@ const Article: FC<Props> = (props: Props) => {
                         <div className="article-near-item">
                             {article.nextArticle.id && (
                                 <Link to={`/article/${article.nextArticle.id}`}>
-                                    <img
-                                        src={article.nextArticle.articleCover}
-                                        alt="error"
-                                    />
+                                    <img src={article.nextArticle.articleCover} alt="error" />
                                     <div
                                         className="article-near-item-info"
                                         style={{ left: 'auto', right: '10%' }}

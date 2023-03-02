@@ -153,5 +153,9 @@
         "presets": [
             "react-app"
         ]
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.191",
+        "webpack-bundle-analyzer": "^4.8.0"
     }
 }
