@@ -29,6 +29,7 @@
         rgba(7, 179, 155, 0.1) 86%,
         rgba(109, 186, 130, 0.1)
     );
+    --blockquote-color:#ececec;
     /* --home-bgc:#f9f9f9; */
 }
 
@@ -53,4 +54,5 @@
     --text-color-sub: #8B8B8B;
     --code-color: rgba(0, 0, 0, 0.3);
     --home-bgc:#282828;
+    --blockquote-color:#555;
 }

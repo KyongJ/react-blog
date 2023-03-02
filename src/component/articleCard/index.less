@@ -10,6 +10,7 @@
         .item {
             text-align: left;
             a {
+                width: 100%;
                 display: block;
                 display: flex;
                 padding: 1rem 1.3rem;
@@ -22,6 +23,10 @@
             }
             &-title{
                 font-weight: 700;
+                width: 150px;
+                overflow:hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
         }
     }
