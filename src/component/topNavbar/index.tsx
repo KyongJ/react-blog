@@ -72,7 +72,6 @@ const TopNavBar: FC = props => {
                     />
                 </div>
                 <div className="search">
-                    {' '}
                     <Search
                         placeholder="input search text"
                         // onSearch={onSearch}
